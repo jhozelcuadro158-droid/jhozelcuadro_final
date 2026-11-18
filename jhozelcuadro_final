@@ -1,0 +1,198 @@
+# ==================================================
+#              PYTHON TUTORIAL SYSTEM
+# ==================================================
+# Program Creator: Your Name
+# Date Created: November 18, 2026
+#
+# Python Creator: Guido van Rossum
+# Python First Released: February 20, 1991
+# ==================================================
+
+
+def line():
+    print("=" * 50)
+
+
+def introduction():
+    line()
+    print("       1. INTRODUCTION TO PROGRAMMING")
+    line()
+
+    print("Programming is the process of giving instructions")
+    print("to a computer to perform specific tasks.")
+    print()
+    print("Python is a popular programming language.")
+    print("It is easy to learn and understand.")
+    print()
+    print("Python is used for:")
+    print("[1] Website Development")
+    print("[2] Game Development")
+    print("[3] Artificial Intelligence")
+    print("[4] Data Analysis")
+    print()
+    print("Example:")
+    print('print("Hello, World!")')
+    print()
+    print("Output:")
+    print("Hello, World!")
+
+
+def basic_syntax():
+    line()
+    print("                 2. BASIC SYNTAX")
+    line()
+
+    print("Python syntax refers to the rules used")
+    print("when writing Python programs.")
+    print()
+    print("Example 1: Printing Text")
+    print('print("Welcome to Python")')
+    print()
+    print("Example 2: Variables")
+    print('name = "Juan"')
+    print("age = 18")
+    print()
+    print("Example 3: Comments")
+    print("# This is a comment")
+    print()
+    print("Example 4: Input")
+    print('name = input("Enter your name: ")')
+    print()
+    print("Example 5: Output")
+    print('print("Hello", name)')
+
+
+def arithmetic_operators():
+    line()
+    print("             3. ARITHMETIC OPERATORS")
+    line()
+
+    print("Arithmetic operators are used to perform")
+    print("mathematical calculations in Python.")
+    print()
+    print("[+] Addition")
+    print("[-] Subtraction")
+    print("[*] Multiplication")
+    print("[/] Division")
+    print("[%] Modulus")
+    print("[**] Exponentiation")
+    print("[//] Floor Division")
+    print()
+    print("Example:")
+    print("a = 10")
+    print("b = 5")
+    print()
+    print("Addition:", 10 + 5)
+    print("Subtraction:", 10 - 5)
+    print("Multiplication:", 10 * 5)
+    print("Division:", 10 / 5)
+    print("Modulus:", 10 % 5)
+    print("Exponentiation:", 10 ** 5)
+    print("Floor Division:", 10 // 5)
+
+
+def quiz(student_name):
+    score = 0
+
+    questions = [
+        {
+            "question": "1. Who created Python?",
+            "choices": [
+                "A. Bill Gates",
+                "B. Guido van Rossum",
+                "C. Mark Zuckerberg",
+                "D. Steve Jobs"
+            ],
+            "answer": "B"
+        },
+        {
+            "question": "2. What is used to display text in Python?",
+            "choices": [
+                "A. input()",
+                "B. print()",
+                "C. display()",
+                "D. show()"
+            ],
+            "answer": "B"
+        },
+        {
+            "question": "3. Which symbol is used for multiplication?",
+            "choices": [
+                "A. +",
+                "B. -",
+                "C. *",
+                "D. /"
+            ],
+            "answer": "C"
+        },
+        {
+            "question": "4. What is the correct way to create a variable?",
+            "choices": [
+                "A. name = 'Juan'",
+                "B. variable name",
+                "C. print = name",
+                "D. input name"
+            ],
+            "answer": "A"
+        },
+        {
+            "question": "5. What is the output of 10 + 5?",
+            "choices": [
+                "A. 10",
+                "B. 15",
+                "C. 20",
+                "D. 5"
+            ],
+            "answer": "B"
+        }
+    ]
+
+    line()
+    print("                  PYTHON QUIZ")
+    line()
+    print("Student Name:", student_name)
+    print("There are 5 questions.")
+    print("Choose the correct letter: A, B, C, or D.")
+    line()
+
+    for item in questions:
+        print()
+        print(item["question"])
+
+        for choice in item["choices"]:
+            print(choice)
+
+        while True:
+            answer = input("Your Answer: ").upper().strip()
+
+            if answer in ["A", "B", "C", "D"]:
+                break
+            else:
+                print("Invalid answer! Please choose A, B, C, or D.")
+
+        if answer == item["answer"]:
+            print("Correct! Good job!")
+            score += 1
+        else:
+            print("Wrong answer!")
+            print("Correct Answer:", item["answer"])
+
+    line()
+    print("                 QUIZ RESULT")
+    line()
+    print("Student Name:", student_name)
+    print("Your Score:", score, "/ 5")
+
+    if score == 5:
+        print("Excellent! Perfect Score!")
+    elif score >= 3:
+        print("Good Job! Keep Learning!")
+    else:
+        print("Keep Practicing! You Can Do It!")
+
+    line()
+
+
+def main():
+    line()
+    print("          WELCOME TO PYTH                  ")
